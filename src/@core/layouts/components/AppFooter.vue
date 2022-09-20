@@ -52,10 +52,13 @@
                 size="16"
               /> Github</b-link>
               <b-link
-                class="mr-50"
+                class="ml-50 mr-50"
                 href="https://discord.gg/humansdotai"
                 target="_blank"
-              >Discord</b-link>
+              ><feather-icon
+                icon="EyeIcon"
+                size="16"
+              /> Discord</b-link>
               <b-link
                 class="ml-50 mr-50"
                 href="https://twitter.com/humansdotai"
