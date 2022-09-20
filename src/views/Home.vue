@@ -19,7 +19,7 @@
       Cosmos Ecosystem Blockchains 🚀
     </h2>
 
-    <div>
+    <div class="min-h-100vh">
       <b-row class="match-height">
         <b-col
           v-for="(data,index) in chains"
