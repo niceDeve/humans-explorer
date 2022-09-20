@@ -1,21 +1,22 @@
 <template>
   <!-- Error page-->
   <div class="misc-wrapper">
-    <b-link class="brand-logo">
-      <vuexy-logo />
-      <h2 class="brand-text text-primary ml-1">
-        PING.PUB
-      </h2>
+    <b-link
+      class="brand-logo"
+      :to="{path:'/devnet'}"
+    >
+      <b-img
+        src="/logos/humans.svg"
+        alt="humans logo"
+        class="d-none d-xl-flex img-fluid"
+      />
     </b-link>
 
     <div class="misc-inner p-2 p-sm-3">
       <div class="w-100 text-center">
         <h2 class="mb-1">
-          Sorry, The chain is not found
+          Sorry, the chain is not found
         </h2>
-        <p class="mb-2">
-          Feel free to contact us if you want to add your chain.
-        </p>
 
         <b-button
           variant="primary"
@@ -40,12 +41,10 @@
 <script>
 /* eslint-disable global-require */
 import { BLink, BButton, BImg } from 'bootstrap-vue'
-import VuexyLogo from '@core/layouts/components/Logo.vue'
 import store from '@/store/index'
 
 export default {
   components: {
-    VuexyLogo,
     BLink,
     BButton,
     BImg,
