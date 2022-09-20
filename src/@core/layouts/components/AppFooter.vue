@@ -1,41 +1,92 @@
 <template>
-  <p class="clearfix mb-0">
-    <span class="float-md-left d-none d-md-block d-md-inline-block mt-25">
-      Powered By
-      <b-link
-        class="ml-25 font-weight-bolder"
-        href="#"
-        target="_blank"
-      >Ping.pub</b-link>
-    </span>
-
-    <router-link
-      v-ripple.400="'rgba(113, 102, 240, 0.15)'"
-      class="float-md-right"
-      to="/coffee"
-    >Buy me a cup of coffee.
-      <span
-        v-ripple.400="'rgba(113, 102, 240, 0.15)'"
-        variant="outline-primary"
+  <b-container class="pb-1 mt-2">
+    <b-row class="align-items-center justify-content-center px-1">
+      <b-col
+        cols="12"
       >
-        <feather-icon
-          icon="HeartIcon"
-          size="21"
-          class="text-danger stroke-current"
-        />
-      </span>
-    </router-link>
-  </p>
+        <div class="d-flex justify-content-between">
+          <div class="d-none d-md-block d-md-inline-block">
+            <b-link href="/devnet">
+              <b-img
+                src="/logos/humans.svg"
+                alt="humans logo"
+                width=""
+              />
+            </b-link>
+          </div>
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex">
+              <b-link
+                class="mr-50"
+                href="/devnet"
+                target="_blank"
+              >Summary</b-link>
+              <b-link
+                class="ml-50 mr-50"
+                href="/devnet/blocks"
+                target="_blank"
+              >Blocks</b-link>
+              <b-link
+                class="ml-50 mr-50"
+                href="/devnet/staking"
+                target="_blank"
+              >Staking</b-link>
+              <b-link
+                class="ml-50"
+                href="/devnet/governance"
+                target="_blank"
+              >Governance</b-link>
+              <b-link
+                class="ml-50"
+                href="/devnet/uptime"
+                target="_blank"
+              >Uptime</b-link>
+            </div>
+            <div class="d-flex">
+              <b-link
+                class="ml-50 mr-50"
+                href="http://github.com/humansdotai"
+                target="_blank"
+              ><feather-icon
+                icon="GithubIcon"
+                size="16"
+              /> Github</b-link>
+              <b-link
+                class="mr-50"
+                href="https://discord.gg/humansdotai"
+                target="_blank"
+              >Discord</b-link>
+              <b-link
+                class="ml-50 mr-50"
+                href="https://twitter.com/humansdotai"
+                target="_blank"
+              ><feather-icon
+                icon="TwitterIcon"
+                size="16"
+              /> Twitter</b-link>
+
+            </div>
+          </div>
+        </div>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
-import { BLink, VBPopover } from 'bootstrap-vue'
+import {
+  BLink, VBPopover, BContainer, BRow, BCol, BImg,
+} from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 
 export default {
   name: 'AppFooter',
   components: {
     BLink,
+    BContainer,
+    BRow,
+    BCol,
+    BImg,
   },
   directives: {
     'b-popover': VBPopover,
