@@ -2,21 +2,20 @@
   <div class="text-center container-lg">
     <full-header />
     <b-link>
-      <div class="d-flex justify-content-center align-items-center">
-        <vuexy-logo />
-        <h1
-          class="text-primary display-4 font-weight-bolder d-none d-md-block"
+      <div class="d-flex justify-content-center align-items-center pl-2 mt-2 mb-2">
+        <img
+          src="/logos/humans.svg"
+          alt="Logo"
+          width="550"
         >
-          Ping Dashboard<small class="flow-left">Beta</small>
-        </h1>
       </div>
     </b-link>
 
-    <p class="mb-1">
-      Ping Dashboard is not just an explorer but also a wallet and more ... 🛠
+    <p class="mb-4">
+      Explorer, dashboard, wallet and more...
     </p>
-    <h2 class="mb-3">
-      Cosmos Ecosystem Blockchains 🚀
+    <h2 class="mb-4">
+      Ecosystem Blockchains
     </h2>
 
     <div class="min-h-100vh">
@@ -122,7 +121,6 @@ import {
   BLink, BAvatar, BRow, BCol, BCard, BCardText, BCardTitle, BDropdown, BDropdownItem,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
-import VuexyLogo from '@core/layouts/components/Logo.vue'
 import store from '@/store/index'
 import { timeIn, toDay, getLocalChains } from '@/libs/utils'
 import AppFooter from '@/@core/layouts/components/AppFooter.vue'
@@ -139,7 +137,6 @@ export default {
     BCardTitle,
     BDropdown,
     BDropdownItem,
-    VuexyLogo,
     AppFooter,
     FullHeader,
   },
