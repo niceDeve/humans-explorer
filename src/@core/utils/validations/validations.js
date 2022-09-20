@@ -12,6 +12,7 @@ import {
   alpha_dash as rule_alpha_dash,
   alpha_num as rule_alpha_num,
   length as rule_length,
+  is_not as rule_is_not,
 } from 'vee-validate/dist/rules'
 import ar from 'vee-validate/dist/locale/ar.json'
 import en from 'vee-validate/dist/locale/en.json'
@@ -22,6 +23,7 @@ import { validatorPositive, validatorUrlValidator, validatorPassword, validatorC
 // ////////////////////////////////////////////////////////
 // General
 // ////////////////////////////////////////////////////////
+export const is_not = extend('is_not', rule_is_not)
 
 export const required = extend('required', rule_required)
 

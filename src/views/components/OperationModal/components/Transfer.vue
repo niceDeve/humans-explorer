@@ -25,7 +25,7 @@
         >
           <validation-provider
             #default="{ errors }"
-            rules="required"
+            :rules="{ is_not: address }"
             name="recipient"
           >
             <b-input-group class="mb-25">
