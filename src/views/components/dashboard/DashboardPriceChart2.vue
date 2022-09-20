@@ -367,10 +367,7 @@ export default {
       return '#'
     },
     github() {
-      if (this.coinInfo.links) {
-        return this.coinInfo.links.repos_url.github[0] || '#'
-      }
-      return '#'
+      return 'http://github.com/humansdotai'
     },
   },
   created() {
