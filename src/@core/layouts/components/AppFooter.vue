@@ -2,7 +2,7 @@
   <b-container class="pb-1 mt-2">
     <b-row class="align-items-center justify-content-center px-1">
       <b-col
-        cols="12"
+        cols="14"
       >
         <div class="d-flex justify-content-between">
           <div class="d-none d-md-block d-md-inline-block">
