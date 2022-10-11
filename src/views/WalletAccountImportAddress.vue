@@ -280,34 +280,39 @@
       </tab-content>
     </form-wizard>
 
-    <b-alert
+    <b-button
+      v-b-toggle.collapse-1
       variant="secondary"
-      :show="!accounts && device === 'keplr'"
     >
-      <h4 class="alert-heading">
-        Enable Keplr For {{ chainId }}
-      </h4>
-      <div class="alert-body p-1">
-        <span>If Keplr has not added <code>{{ chainId }}</code>, We can enable it here.</span>
-        <b-form-textarea
-          :value="keplr"
-          rows="10"
-          class="mt-1 mb-1"
-        />
-        <div
-          v-if="error"
-          class="text-danger"
-        >
-          {{ error }}
+      Enable Keplr for {{ chainId }}
+    </b-button>
+    <b-collapse id="collapse-1">
+      <b-alert
+        variant="secondary"
+        :show="!accounts && device === 'keplr'"
+      >
+        <div class="alert-body p-1">
+          <span>If Keplr has not added <code>{{ chainId }}</code>, We can enable it here.</span>
+          <b-form-textarea
+            :value="keplr"
+            rows="10"
+            class="mt-1 mb-1"
+          />
+          <div
+            v-if="error"
+            class="text-danger"
+          >
+            {{ error }}
+          </div>
+          <b-button
+            variant="primary"
+            @click="suggest()"
+          >
+            Enable Keplr
+          </b-button>
         </div>
-        <b-button
-          variant="primary"
-          @click="suggest()"
-        >
-          Enable Keplr
-        </b-button>
-      </div>
-    </b-alert>
+      </b-alert>
+    </b-collapse>
   </div>
 </template>
 
@@ -333,6 +338,8 @@ import {
   VBTooltip,
   BFormTextarea,
   BButton,
+  BCollapse,
+  VBToggle,
 } from 'bootstrap-vue'
 import { required } from '@validations'
 import {
@@ -343,6 +350,7 @@ import { stringToPath } from '@cosmjs/crypto'
 
 export default {
   components: {
+    BCollapse,
     BAlert,
     BButton,
     ValidationProvider,
@@ -365,6 +373,7 @@ export default {
   },
   directives: {
     'b-tooltip': VBTooltip,
+    'b-toggle': VBToggle,
   },
   data() {
     return {
