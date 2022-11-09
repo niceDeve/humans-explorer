@@ -1,14 +1,13 @@
 import fetch from 'node-fetch'
 // import axios from 'axios'
 import store from '@/store'
+import { toBase64 } from '@cosmjs/encoding'
 import compareVersions from 'compare-versions'
 import { TxRaw } from 'cosmjs-types/cosmos/tx/v1beta1/tx'
-import { toBase64 } from '@cosmjs/encoding'
-import {
-  Proposal, ProposalTally, Proposer, StakingPool, Votes, Deposit,
-  Validator, StakingParameters, Block, ValidatorDistribution, StakingDelegation, WrapStdTx, getUserCurrency,
-} from './utils'
 import OsmosAPI from './osmos'
+import {
+  Block, Deposit, getUserCurrency, Proposal, ProposalTally, Proposer, StakingDelegation, StakingParameters, StakingPool, Validator, ValidatorDistribution, Votes, WrapStdTx,
+} from './utils'
 
 function commonProcess(res) {
   if (res && Object.keys(res).includes('result')) {
@@ -132,7 +131,7 @@ export default class ChainFetch {
     if (compareVersions(this.config.sdk_version, '0.40') < 0) {
       return this.get(`/supply/total/${denom}`).then(data => ({ amount: commonProcess(data), denom }))
     }
-    return this.get(`/cosmos/bank/v1beta1/supply/${denom}`).then(data => commonProcess(data).amount)
+    return this.get(`/cosmos/bank/v1beta1/supply/by_denom?denom=${denom}`).then(data => commonProcess(data).amount)
   }
 
   async getBankTotals() {

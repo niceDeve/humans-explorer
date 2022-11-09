@@ -1,32 +1,23 @@
 {
-    "chain_name": "testnet",
-    "api": [
-      "https://devnet-explorer-api.humans.zone"
-    ],
-    "rpc": [
-      "https://devnet-explorer-rpc.humans.zone",
-      "https://devnet-explorer-rpc.humans.zone/genesis?",
-      "https://devnet-explorer-rpc.humans.zone/status?"
-    ],
-    "coin_type": "118",
-    "sdk_version": "0.45.1",
-    "addr_prefix": "human",
-    "min_tx_fee": "0",
-    "logo": "/logos/h-logo.svg",
-    "assets": [
-      {
-        "symbol": "HEART",
-        "base": "uheart",
-        "exponent": 6,
-        "coingecko_id": "humans-ai",
-        "logo": "https://raw.githubusercontent.com/Agoric/agoric-sdk/master/packages/wallet/ui/public/tokens/BLD.svg"
-      },
-      {
-        "symbol": "RUN",
-        "base": "urun",
-        "exponent": 6,
-        "coingecko_id": "agoric",
-        "logo": "https://raw.githubusercontent.com/Agoric/agoric-sdk/master/packages/wallet/ui/public/tokens/RUN.svg"
-      }
-    ]
-  }
+  "chain_name": "testnet",
+  "api": [
+    "http://45.136.40.9:1317"
+  ],
+  "rpc": [
+    "http://45.136.40.9:26657"
+  ],
+  "coin_type": "118",
+  "sdk_version": "0.46.3",
+  "addr_prefix": "human",
+  "min_tx_fee": "0",
+  "logo": "/logos/h-logo.svg",
+  "assets": [
+    {
+      "symbol": "HEART",
+      "base": "uheart",
+      "exponent": 6,
+      "coingecko_id": "humans-ai",
+      "logo": "https://assets.coingecko.com/coins/images/21273/small/h_logo_1x.png?1638858402"
+    }
+  ]
+}
