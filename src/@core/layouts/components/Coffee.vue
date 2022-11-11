@@ -49,12 +49,12 @@ export default {
   },
   data() {
     return {
-      selectedAddress: 'cosmos1ev0vtddkl7jlwfawlk06yzncapw2x9quyxx75u',
+      selectedAddress: 'human178jjyne475dnh5jpuqfjt30ak4r64xlsxy7xsf',
     }
   },
   computed: {
     chains() {
-      const { data } = addressDecode('cosmos1ev0vtddkl7jlwfawlk06yzncapw2x9quyxx75u')
+      const { data } = addressDecode('human178jjyne475dnh5jpuqfjt30ak4r64xlsxy7xsf')
       const config = Object.values(JSON.parse(localStorage.getItem('chains')))
         .map(x => ({
           addr: addressEnCode(x.addr_prefix, data),

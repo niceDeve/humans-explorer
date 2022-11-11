@@ -28,6 +28,7 @@ spec:
         - name: docker-regcred
       containers:
         - name: explorer
+          imagePullPolicy: Always
           image: joinhummans/explorer:testnet
           ports:
             - containerPort: 80
