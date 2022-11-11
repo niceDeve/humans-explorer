@@ -1,15 +1,15 @@
 {
   "chain_name": "Humans-Testnet",
   "api": [
-    "http://45.136.40.9:1317"
+    "https://api-testnet.humans.zone"
   ],
   "rpc": [
-    "http://45.136.40.9:26657"
+    "https://rpc-testnet.humans.zone"
   ],
   "coin_type": "118",
   "sdk_version": "0.46.3",
   "addr_prefix": "human",
-  "min_tx_fee": "0.004139",
+  "min_tx_fee": "0",
   "logo": "/logos/h-logo.svg",
   "assets": [
     {
@@ -17,7 +17,7 @@
       "base": "uheart",
       "exponent": 6,
       "coingecko_id": "humans-ai",
-      "logo": "https://raw.githubusercontent.com/Agoric/agoric-sdk/master/packages/wallet/ui/public/tokens/BLD.svg"
+      "logo": "https://assets.coingecko.com/coins/images/21273/small/h_logo_1x.png?1638858402"
     }
   ]
 }
