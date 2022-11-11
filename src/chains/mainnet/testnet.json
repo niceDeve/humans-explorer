@@ -1,5 +1,5 @@
 {
-  "chain_name": "testnet",
+  "chain_name": "Humans-Testnet",
   "api": [
     "http://45.136.40.9:1317"
   ],

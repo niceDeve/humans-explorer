@@ -1,5 +1,5 @@
 {
-  "chain_name": "testnet",
+  "chain_name": "Humans-Testnet",
   "api": [
     "http://45.136.40.9:1317"
   ],
@@ -9,7 +9,7 @@
   "coin_type": "118",
   "sdk_version": "0.46.3",
   "addr_prefix": "human",
-  "min_tx_fee": "0",
+  "min_tx_fee": "0.004139",
   "logo": "/logos/h-logo.svg",
   "assets": [
     {
