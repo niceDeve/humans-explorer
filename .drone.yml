@@ -10,5 +10,6 @@ steps:
         from_secret: docker_username
       password:
         from_secret: docker_password
-      repo: registry.humans.ai/explorer
+      repo: explorer
+      registry: registry.humans.ai
       tags: testnet
