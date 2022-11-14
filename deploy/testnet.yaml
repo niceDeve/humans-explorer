@@ -25,11 +25,11 @@ spec:
       # - Init containers always run to completion.
       # - Each init container must complete successfully before the next one starts.
       imagePullSecrets:
-        - name: docker-regcred
+        - name: regcred
       containers:
         - name: explorer
           imagePullPolicy: Always
-          image: joinhummans/explorer:testnet
+          image: registry.humans.ai/explorer:testnet
           ports:
             - containerPort: 80
               name: explorer
