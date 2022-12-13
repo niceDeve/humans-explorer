@@ -455,7 +455,17 @@ export default {
   methods: {
     suggest() {
       if (window.keplr) {
-        window.keplr.experimentalSuggestChain(JSON.parse(this.keplr)).catch(e => {
+        window.keplr.experimentalSuggestChain(JSON.parse(this.keplr)).then(() => {
+          this.$toast({
+            component: ToastificationContent,
+            props: {
+              title: 'Network has been added! You can click next now!',
+              icon: 'EditIcon',
+              variant: 'success',
+            },
+          })
+        }).catch(e => {
+          console.log(e)
           this.error = e
         })
       }
@@ -467,9 +477,9 @@ export default {
         rpc: Array.isArray(chain.rpc) ? chain.rpc[0] : chain.rpc,
         rest: Array.isArray(chain.api) ? chain.api[0] : chain.api,
         bip44: {
-          coinType: chain.coin_type,
+          coinType: parseInt(chain.coin_type, 10),
         },
-        coinType: chain.coin_type,
+        coinType: parseInt(chain.coin_type, 10),
         bech32Config: {
           bech32PrefixAccAddr: chain.addr_prefix,
           bech32PrefixAccPub: `${chain.addr_prefix}pub`,
