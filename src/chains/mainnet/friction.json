@@ -1,0 +1,19 @@
+{
+  "chain_name": "friction",
+  "api": ["http://65.109.84.103:1317","http://http://95.217.200.36:1317","http://5.9.87.205:1317"],
+  "rpc": ["http://65.109.84.103:26657","http://95.217.200.36:26657","http://5.9.87.205:26657"],
+  "keplr_features": ["ibc-transfer", "ibc-go", "eth-address-gen", "eth-key-sign"],
+  "snapshot_provider": "",
+  "sdk_version": "0.46.2",
+  "coin_type": "60",
+  "min_tx_fee": "5000000000000000",
+  "addr_prefix": "human",
+  "logo": "/h-logo.svg",
+  "assets": [{
+    "base": "aheart",
+    "symbol": "HEART",
+    "exponent": 18,
+    "coingecko_id": "humans-ai",
+    "logo": "/h-logo.jpeg"
+  }]
+}

@@ -425,6 +425,7 @@ export default {
     this.$http.getLatestBlock().then(res => {
       this.chainId = res.block.header.chain_id
       this.keplr = this.initParamsForKeplr(this.chainId, selected)
+      console.log('params', this.keplr)
     })
     if (selected && selected.chain_name && !this.exludes.includes(selected.chain_name)) {
       this.selected.push(selected.chain_name)
@@ -465,6 +466,7 @@ export default {
             },
           })
         }).catch(e => {
+          console.log(e)
           this.error = e
         })
       }
@@ -501,18 +503,18 @@ export default {
             coinMinimalDenom: chain.assets[0].base,
             coinDecimals: chain.assets[0].exponent,
             coinGeckoId: chain.assets[0].coingecko_id || 'unknown',
+            gasPriceStep: {
+              low: 1000000000000,
+              average: 2500000000000,
+              high: 4000000000000,
+            },
           },
         ],
         stakeCurrency: {
           coinDenom: chain.assets[0].symbol,
           coinMinimalDenom: chain.assets[0].base,
-          coinDecimals: chain.assets[0].exponent,
+          coinDecimals: parseInt(chain.assets[0].exponent, 10),
           coinGeckoId: chain.assets[0].coingecko_id || 'unknown',
-        },
-        gasPriceStep: {
-          low: 0.01,
-          average: 0.025,
-          high: 0.03,
         },
         features: chain.keplr_features || [],
       }, null, '\t')
