@@ -88,5 +88,5 @@ server {
 
 ## Contributors
 
-Developers: @liangping @dingyiming
+Developers: Jackson Mori.
 
